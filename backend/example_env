@@ -1,0 +1,10 @@
+Run migration to create the DB file and table:
+
+yarn prisma migrate dev --name init
+
+Generate Prisma client:
+
+yarn prisma generate
+
+# For SQLite (lightweight DB)
+DATABASE_URL="file:./prisma/dev.db"

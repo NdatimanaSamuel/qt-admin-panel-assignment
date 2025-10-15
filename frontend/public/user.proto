@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package user;
+
+enum UserRole {
+  ADMIN = 0;
+  USER = 1;
+}
+
+enum UserStatus {
+  ACTIVE = 0;
+  INACTIVE = 1;
+}
+
+// User message
+message User {
+  int32 id = 1;
+  string email = 2;
+  UserRole role = 3;
+  UserStatus status = 4;
+  string createdAt = 5;
+  string signature = 6;
+}
+
+
+message UserList {
+  repeated User users = 1;
+}
